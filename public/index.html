@@ -26,6 +26,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -38,52 +41,40 @@
     <span>tweeter</span>
     <div class="write-tweet-nav">
       <div class="nav-text"><b>Write</b> a new tweet</div>
-      <i class="fa-sharp fa-solid fa-angles-down fa-fade" style="color: orange;"></i>
+      <i class="fa-sharp fa-solid fa-angles-down fa-fade" style="color: red;"></i>
     </div>
   </nav>
-  <header>
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h1>Mithra Perera</h1>
-    </div>
-  </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets/" id="tweet-form">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div id="button-counter">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <section class="tweet">
-      <div class="tweet-container">
-        <header>
-          <div id="tweet-profile-name">
-            <img src="/images/3135715.png" class="profile-pic">
-            <div>Mithra Perera</div>
-          </div>
-          <div>@mithraperera</div>
-        </header>
-        <article>Hello World!</article>
-        <footer>
-          <div>10 days ago</div>
-          <div>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
+  <div id="desktop-container">
+    <header class="profile-header">
+      <div>
+        <img src="/images/profile-hex.png" id="profile-picture">
       </div>
-    </section>
-  </main>
+      <br>
+      <div>
+        <h1><strong>Mithra</strong> Perera</h1>
+      </div>
+    </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <section class="tweet-error">
+          <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #fab005;"></i>
+          <div id="tweet-error-text"></div>
+          <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #fab005;"></i>
+        </section>
+        <form method="POST" action="/tweets/" class="tweet-form">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" class="tweet-text"></textarea>
+          <div id="button-counter">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section id="tweets">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

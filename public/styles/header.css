@@ -1,10 +1,31 @@
 header {
-  height: 700px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: orange;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+	height: 520px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: orange;
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+h1 {
+	color: white;
+	font-weight: lighter;
+	margin: 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+#profile-picture {
+	width: 50%;
+	height: auto;
+	margin-top: 4em;
+}
+
+header div {
+	display: flex;
+	justify-content: center;
 }

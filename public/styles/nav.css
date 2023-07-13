@@ -1,7 +1,7 @@
 nav {
 	height: 120px;
 	width: 100vw;
-	background-color: #249ce2;
+	/* background: none; */
 	color: #ffffff;
 	display: flex;
 	align-items: center;
@@ -13,8 +13,8 @@ nav {
 
 span {
 	font-family: Bungee;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
+	margin: 1.5em;
+	font-size: 1.5em;
 }
 
 .write-tweet-nav {

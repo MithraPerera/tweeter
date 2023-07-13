@@ -3,18 +3,20 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	margin-top: 100px;
 }
 
-#tweet-text {
+.tweet-text {
 	font-weight: bold;
 	border-bottom: solid 5px;
-	width: 1000px;
+	width: 50vw;
 	margin: 25px 0px;
 }
 
-#tweet-form {
+.tweet-form {
 	display: flex;
 	flex-direction: column;
+	width: 50vw;
 }
 
 #button-counter {
@@ -30,7 +32,7 @@ button {
 }
 
 textarea {
-	margin: 25px 0px;
+	/* margin: 100px 0px; */
 	background-color: #f4f1ec;
 	border: none;
 	outline: none;
@@ -41,5 +43,20 @@ textarea {
 }
 
 label {
+	font-weight: bold;
+}
+
+.tweet-error {
+	border: solid 3px red;
+	display: none;
+	justify-content: center;
+	margin: 1em;
+	padding: 1em;
+	max-height: 80px;
+}
+
+#tweet-error-text {
+	color: red;
+	margin: 0 10px;
 	font-weight: bold;
 }

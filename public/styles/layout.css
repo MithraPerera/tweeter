@@ -4,10 +4,12 @@
  * Do not modify these two selectors, please
  */
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 /*
@@ -15,17 +17,63 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans 3', sans-serif;
+	color: #545149;
+	background-color: #f4f1ec;
+	font-size: 24px;
+	font-family: "Source Sans 3", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  width: 90%;
-  margin: 0 auto;
- }
+main {
+	width: 90%;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+	#desktop-container {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	#tweets {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		margin-top: 5em;
+		padding-right: 5em;
+		width: 100vw;
+		height: auto;
+	}
+
+	.profile-header {
+		margin: 10em 5em;
+		padding: 1em;
+		height: 50%;
+	}
+
+	nav {
+		background-color: #4056a1;
+	}
+
+	/* Changes to Tweet Container for Desktop */
+
+	.tweet-container {
+		width: 50vw;
+		margin-bottom: 30px;
+		overflow-wrap: break-word;
+	}
+
+	.tweet-container article {
+		margin-bottom: 1em;
+		padding-left: 1em;
+	}
+}
